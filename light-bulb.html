@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<style>
+    .laks {
+        color: blue;
+        padding: 2px red;
+    }
+</style>
+<p class="laks"> The light bulb.</p>
+<script>
+    function jos(sw) {
+        var pic;
+        if (sw == 1) {
+            pic = "assets/bulboff.gif"
+        } else {
+            pic = "assets/bulbon.gif"
+        }
+
+        if (sw == 4) {
+            pic = "assets/bulbonpurple.gif"
+        } else if (sw == 3) {
+            pic = "assets/bulbonred.gif"
+        }
+
+        document.getElementById('bulb').src = pic;
+    }
+</script>
+
+<img id="bulb" src="assets/bulboff.gif" height="300px">
+
+<p>
+    <button type="button" onclick="jos(1)">Light off</button>
+    <button type="button" onclick="jos(0)">Ligh Yellow</button>
+    <button type="button" onclick="jos(3)">Light red</button>
+    <button type="button" onclick="jos(4)">Light Purple</button>
+
+</p>
+
+<button type="button" onclick="document.getElementById('opo').innerHTML = Date()">
+    Click me to know the time
+</button>
+<p id="opo"></p>
